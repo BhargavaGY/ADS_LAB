@@ -42,7 +42,10 @@ void inorderHelper(Node *root)
         return; 
   
     inorderHelper(root->left); 
-    cout << root->data << "  "; 
+    if(root->color)
+        cout << root->data <<"(Black) "; 
+    else
+        cout << root->data <<"(Red) "; 
     inorderHelper(root->right); 
 } 
   
